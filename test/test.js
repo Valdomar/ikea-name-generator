@@ -10,10 +10,12 @@ describe('getName function test', () => {
                 containsSwedish = true;
             }
         }
+        console.log("\tresult: %s", result);
         expect(containsSwedish).to.equal(false);
     });
-    it('should return a name between 3 and 9 characters', () => {
+    it('should return a name between 5 and 10 characters', () => {
         var result = ikea.getName();
-        expect((result.length >= 3 && result.length <= 9)).to.eq(true);
+        console.log("\tresult: %s", result);
+        expect((result.length >= 5 && result.length <= 10)).to.eq(true);
     });
 });

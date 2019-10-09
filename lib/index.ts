@@ -1,5 +1,8 @@
 import AlphabetSoup from "./utils/Alphabet";
 
+let numVowels: number = 0;
+let numConsonants: number = 0;
+
 //===== FUNCTIONS THAT GET THE NEXT LETTER
 // Get any letter from alphabet
 function grabAnyLetter(): string {
@@ -28,8 +31,6 @@ function grabNextGoodLetter(word: string): string {
 // Main function to get and return the next letter
 function returnNextLetter(word: string): string {
   let nextLetter: string;
-  let numVowels: number = 0;
-  let numConsonants: number = 0;
 
   // If it's the first letter, grab any letter
   if (word.length === 0) {
@@ -63,8 +64,10 @@ function returnNextLetter(word: string): string {
 * @Return {string}
 */
 export function getName(withSwedishCharacters: boolean = true): string {
-  // Pick random word length between 3 and 9 characters
-  const wordLength: number = Math.floor(Math.random() * 6) + 3;
+  numVowels = 0;
+  numConsonants = 0;
+  // Pick random word length between 5 and 9 characters
+  const wordLength: number = Math.floor(Math.random() * 4) + 5;
   let word: string = '';
 
   // Generate each letter wordLength times
@@ -74,7 +77,7 @@ export function getName(withSwedishCharacters: boolean = true): string {
 
   // Checks if word ended with two consonants. For readability, end with an extra vowel
   let lastLetters: string = word.slice(-2);
-  if (!AlphabetSoup.justVowels().indexOf(lastLetters[0]) && !AlphabetSoup.justVowels().indexOf(lastLetters[1])) {
+  if (AlphabetSoup.justVowels().indexOf(lastLetters[0]) == -1 && AlphabetSoup.justVowels().indexOf(lastLetters[1]) == -1) {
     word += grabAVowel();
   }
 

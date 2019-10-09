@@ -44,7 +44,7 @@ npm run test
 
 ## Credits
 
-The algorithm to generate ikea furniture names comes from [@crazykate](https://github.com/craftykate/) [craftykate/ikea-name-generator](https://github.com/craftykate/). 
+The algorithm to generate ikea furniture names comes from [@crazykate](https://github.com/craftykate/)[/ikea-name-generator](https://github.com/craftykate/). 
 You can see the generator live on [ikea-name-generator.surge.sh](http://ikea-name-generator.surge.sh/)
 
 I just needed a package for node to use it into my project :)
