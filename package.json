@@ -1,7 +1,7 @@
 {
   "name": "ikea-name-generator",
-  "version": "1.0.0",
-  "description": "Generate random ikea's style names",
+  "version": "1.0.1",
+  "description": "A node.js module that returns a random ikea furniture name",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
